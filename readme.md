@@ -56,7 +56,7 @@ Use randchacha_browser.js
 
 ```
 let seed = new Uint8Array(32);
-let rng = randchacha.ChaChaRng(seed);
+let rng = new randchacha.ChaChaRng(seed);
 rng.nextU32();
 // see nodejs usage for full details
 ```
