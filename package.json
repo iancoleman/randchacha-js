@@ -1,0 +1,21 @@
+{
+  "name": "randchacha",
+  "version": "1.0.0",
+  "description": "The ChaCha random number generator.",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js --standalone randchacha > randchacha_browser.js",
+    "buildmin": "browserify index.js --standalone randchacha | terser -c > randchacha_browser.min.js",
+    "test": "jasmine"
+  },
+  "author": "Ian Coleman",
+  "license": "MIT",
+  "dependencies": {
+    "chacha": "^2.1.0"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "jasmine": "^3.8.0",
+    "terser": "^5.7.1"
+  }
+}
