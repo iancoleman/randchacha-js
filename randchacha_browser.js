@@ -7,7 +7,7 @@ class ChaChaRng{
 
     constructor(seedBytes) {
         if (seedBytes instanceof Array || seedBytes instanceof Uint8Array) {
-            seedBytes = new Buffer(seedBytes);
+            seedBytes = new Buffer.from(seedBytes);
         }
         if (!(seedBytes instanceof Buffer)) {
             throw new Error("Seed is not an array");
@@ -17,7 +17,7 @@ class ChaChaRng{
             throw new Error("Seed is not 32 bytes long");
             return;
         }
-        let nonce = new Buffer(new Uint8Array(12));
+        let nonce = new Buffer.from(new Uint8Array(12));
         this.cipher = chacha.chacha20(seedBytes, nonce);
     }
 
