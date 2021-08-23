@@ -9,6 +9,11 @@
     "test": "jasmine"
   },
   "author": "Ian Coleman",
+  "homepage": "https://github.com/iancoleman/randchacha-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iancoleman/randchacha-js.git"
+  },
   "license": "MIT",
   "dependencies": {
     "chacha": "^2.1.0"
